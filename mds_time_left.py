@@ -65,9 +65,9 @@ def renderStats(self, _old):
         + "<div style='display:table-cell;vertical-align:middle;" \
         + "padding-left:2em;'>" \
         + "<span style='white-space:nowrap;'>" + _("Average") \
-        + ":<br> " + _("%.01f cards/minute") % (speed) \
+        + ":<br> " + _("%.01f mn/card") % (1/max(speed,1)) \
         + "</span><br><br>" \
-        + _("More") + "&nbsp;" + ngettext(
+        + _("Remaining :") + "&nbsp;" + ngettext(
              "%s minute.", "%s minutes.", minutes) % (minutes) \
         + "</div></div>"
     return buf
